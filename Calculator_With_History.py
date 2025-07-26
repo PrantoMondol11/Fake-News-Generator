@@ -18,13 +18,16 @@ while (True):
         f.write(his+"\n")  
     elif opt==2:
         f = open("History.txt", "r") 
-        content=f.read()
-        if content == "":
+        lines = f.readlines()
+        if lines == "":
             print("Nothing to show!")
         else:
+            lines=reversed(lines)
             print("History:")
             print("..........................")
-            print(content)
+            for line in lines:
+                
+                print(line,end="")
     elif opt==3:
         f.seek(0)
         f.truncate()
