@@ -16,4 +16,5 @@ while(opt=="yes"):
 
     print("Do you want to generate another one:")
     opt=str(input())
+print("Good Bye")
     
